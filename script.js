@@ -5,8 +5,8 @@ let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
 console.log('d');
 function makeGrid() {
-  makeRows(8);
-  makeColumns(8);
+  makeRows(16);
+  makeColumns(16);
   console.log("de");
 }
 function makeRows(numRow) {
@@ -25,7 +25,7 @@ function makeColumns(numCell) {
       let newCell = document.createElement("div");
       //newCell.className.add("cell");
       //container.appendChild(newCell); //no quotations matter?
-      newCell.innerHTML += 'div';
+      //newCell.innerHTML += 'div';
       rows[c].appendChild(newCell).className = "cell";
       console.log("derpy");
     }

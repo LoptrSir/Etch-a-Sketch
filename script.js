@@ -3,10 +3,18 @@
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
 let cells = document.getElementsByClassName("cell");
-console.log('d');
+console.log("d");
+
+let size = prompt("Input a number up to 100 for the desired grid size.");
+
+while (size > 100 || isNaN(size)) {
+  alert("Incorrect variable, try again. ");
+  size = prompt("Input a number up to 100 for the desired grid size.");
+}
+
 function makeGrid() {
-  makeRows(16);
-  makeColumns(16);
+  makeRows(size);
+  makeColumns(size);
   console.log("de");
 }
 function makeRows(numRow) {
@@ -32,3 +40,8 @@ function makeColumns(numCell) {
   }
 }
 makeGrid();
+
+//const boxes = document.querySelector(".cell");
+//boxes.forEach((box) => {
+//box.addEventListener("click", console.log("click"));
+//});

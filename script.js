@@ -38,8 +38,15 @@ function makeColumns(numCell) {
 }
 makeGrid();
 
-const boxes = document.querySelector(".cell");
+const boxes = document.querySelectorAll(".cell");
 boxes.forEach((box) => {
-  box.addEventListener("click", console.log("click"));
+  box.addEventListener("mouseover", function handleMouseover(event){
+  console.log("click", event);
+  if (box.style.background === 'green'){
+    boxes.setAttribute('style', 'background-color: white;')
+  }else {
+        box.setAttribute('style', 'background-color: green;')
+    }
 });
-//test
+});
+

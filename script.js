@@ -7,17 +7,29 @@ let size = 0;
 //let size = prompt("Input a number up to 100 for the desired grid size.");
 console.log("d", size);
 
-const button = document.getElementById('btn');
-button.addEventListener('click', function handleClick(event) {
-size = prompt("Input a number up to 100 for the desired grid size.");
-console.log('1', size);
-
-while (size > 100 || isNaN(size)) {
-  alert("Incorrect variable, try again. ");
+const button = document.getElementById("btn");
+button.addEventListener("click", function handleClick(event) {
   size = prompt("Input a number up to 100 for the desired grid size.");
-  console.log('2', size);
-}
-makeGrid();
+  console.log("1", size);
+
+  while (size > 100 || isNaN(size)) {
+    alert("Incorrect variable, try again. ");
+    size = prompt("Input a number up to 100 for the desired grid size.");
+    console.log("2", size);
+  }
+  makeGrid();
+  console.log("MG");
+  const boxes = document.querySelectorAll(".cell");
+boxes.forEach((box) => {
+  box.addEventListener("mouseover", function handleMouseover(event) {
+    console.log("mouseOver", event);
+    if (box.style.background === "green") {
+      boxes.setAttribute("style", "background-color: white;");
+    } else {
+      box.setAttribute("style", "background-color: green;");
+    }
+  });
+});
 });
 
 function makeGrid() {
@@ -46,15 +58,6 @@ function makeColumns(numCell) {
 }
 //makeGrid();
 
-const boxes = document.querySelectorAll(".cell");
-boxes.forEach((box) => {
-  box.addEventListener("mouseover", function handleMouseover(event){
-  console.log("click", event);
-  if (box.style.background === 'green'){
-    boxes.setAttribute('style', 'background-color: white;')
-  }else {
-        box.setAttribute('style', 'background-color: green;')
-    }
-});
-});
 
+//size = 0;
+console.log("end");

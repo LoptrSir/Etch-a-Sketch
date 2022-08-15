@@ -1,24 +1,11 @@
 /*style.css*/
 .gridRow{
 display: flex;
-/*height: 20 px;
-width: 20 px;*/
 border: 3px solid red;
-/*justify-content: space-between;*/
 }
 .cell {
-    /*display: flex;*/
 border: 3px solid blue;
 background-color: aquamarine;
 width: 100%;
 aspect-ratio: 1/1;
-/*height: 100%;*/
-/*min height: 10px;
-min-width: 10px;*/
 }
-/*.container{
-border: 3px green;
-}*/
-/*div{
-    border: 3px black;
-}*/
